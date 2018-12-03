@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/popup_Sua"
+        android:title="Sửa"></item>
+    <item
+        android:id="@+id/popup_Xoa"
+        android:title="Xóa"></item>
+    <item
+        android:id="@+id/popup_chitiet"
+        android:title="Chi tiết"></item>
+</menu>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="4dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginRight="4dp"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    app:cardCornerRadius="5dp"
+    app:cardMaxElevation="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:paddingLeft="8dp">
+
+        <ImageView
+            android:id="@+id/img_logo_kt"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/item_khoanthu" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@+id/img_logo_kt"
+            android:orientation="vertical"
+            android:padding="4dp"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:textColor="#000"
+                android:fontFamily="@font/roboto_regular"
+                android:id="@+id/tv_item_tenkhoanthu"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="Khoan thu 1" />
+
+            <TextView
+                android:fontFamily="@font/roboto_regular"
+                android:id="@+id/tv_item_maloaithu_khoanthu"
+                style="@style/headlineFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="Loại thu: " />
+
+
+
+            <TextView
+                android:fontFamily="@font/roboto_regular"
+                android:id="@+id/tv_item_sotienkhoanthu"
+                style="@style/headlineFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="Ghi chú: Ghi chú 1" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_more_khoan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_more_vert" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

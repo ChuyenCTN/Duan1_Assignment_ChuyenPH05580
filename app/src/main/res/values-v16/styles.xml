@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="headlineFont" parent="@android:style/TextAppearance.Small">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="basicFont" parent="@android:style/TextAppearance.Large">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+</resources>

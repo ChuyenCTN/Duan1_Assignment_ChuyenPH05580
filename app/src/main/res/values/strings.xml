@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Assignment</string>
+    <string name="title_activity_thongke_">Thongke_Activity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="text1">Expense Manager là một ứng dụng thông minh và dễ dàng sử dụng. Nó cho phép bạn quản lý và phân loại các khoản thu nhập và chi tiêu, tạo lập và theo dõi các kế hoạch tài chính trong tương lai. Ứng dụng hoạt động trên các thiết bị điện thoại Android từ API 15 - API 28 (4.0.3 - 9)</string>
+    <string name="text2">
+        Bạn chỉ tốn vài phút để ghi chép lại chi tiêu hàng ngày của mình, và phân loại vào các mục như là: Thức Ăn, Mua sắm; hay là thêm các khoản thu nhập như Lương, Quà tặng, v.v...
+    </string>
+    <string name="text3">
+        Dựa trên thói quen tiêu dùng của bản thân, bạn có thể tạo một ngân sách để chi tiêu trong một khoảng thời gian nhất định. Ứng dụng sẽ thường xuyên nhắc nhở về tiến độ chi tiêu của bạn, giữ cho các khoản chi luôn trong tầm kiểm soát.Và còn nhiều chức năng thú vị khác đang chờ bạn khám phá.
+    </string>
+
+
+
+</resources>
