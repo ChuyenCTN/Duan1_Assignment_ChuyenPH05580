@@ -68,7 +68,7 @@ public class Recycle_Adapter_Khoanthu extends RecyclerView.Adapter<Recycle_Adapt
     public void onBindViewHolder(@NonNull final Recycle_Adapter_Khoanthu.ViewHolder viewHolder, final int i) {
         viewHolder.tvItemMaloaithuKhoanthu.setText("ID: " + khoanthuArrayList.get(i).getMaKhoanThu());
         viewHolder.tvItemTenkhoanthu.setText(khoanthuArrayList.get(i).getTenKhoanThu());
-        viewHolder.tvItemSotienkhoanthu.setText("Số tiền: " + khoanthuArrayList.get(i).getSotien() + " Vnđ");
+        viewHolder.tvItemSotienkhoanthu.setText("Số tiền: " + khoanthuArrayList.get(i).getSotien() + " $");
         viewHolder.imgMoreKhoan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View view) {
@@ -211,7 +211,7 @@ public class Recycle_Adapter_Khoanthu extends RecyclerView.Adapter<Recycle_Adapt
                                 tvShowtenKhoan.setText(khoanthuArrayList.get(i).getTenKhoanThu());
                                 tvShowIdKhoan.setText("ID: " + khoanthuArrayList.get(i).getMaKhoanThu());
                                 tvShowLoaiKhoan.setText("Loại thu: " + khoanthuArrayList.get(i).getTenLoaiThu());
-                                tvShowSotienKhoan.setText("Số tiền: " + khoanthuArrayList.get(i).getSotien() + " Vnđ");
+                                tvShowSotienKhoan.setText("Số tiền: " + khoanthuArrayList.get(i).getSotien() + " $");
                                 tvShowNgayKhoan.setText("Ngày thu: " + khoanthuArrayList.get(i).getNgay());
                                 tvShowGhichuKhoan.setText("Ghi chú: " + khoanthuArrayList.get(i).getGhichu());
 

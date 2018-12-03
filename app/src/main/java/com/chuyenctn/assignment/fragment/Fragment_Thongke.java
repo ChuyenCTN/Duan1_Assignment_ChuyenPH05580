@@ -98,20 +98,20 @@ public class Fragment_Thongke extends Fragment {
         double dbtienchi = 0;
         double dbtienthu = 0;
         if (tienthu.equalsIgnoreCase("null")) {
-            tvSotienKhoanThuTK.setText("Số tiền: " + " Vnđ");
+            tvSotienKhoanThuTK.setText("Số tiền: " + " $");
         } else {
-            tvSotienKhoanThuTK.setText("Số tiền: " + khoanThuDao.getSoTienKhoanThu() + " Vnđ");
+            tvSotienKhoanThuTK.setText("Số tiền: " + khoanThuDao.getSoTienKhoanThu() + " $");
             dbtienthu = Double.parseDouble(khoanThuDao.getSoTienKhoanThu());
         }
 
         if (tienchi.equalsIgnoreCase("null")) {
-            tvSotienKhoanChiTK.setText("Số tiền: " + "" + " Vnđ");
+            tvSotienKhoanChiTK.setText("Số tiền: " + "" + " $");
         } else {
             dbtienchi = Double.parseDouble(khoanChiDao.getsotienKhoanChi());
-            tvSotienKhoanChiTK.setText("Số tiền: " + khoanChiDao.getsotienKhoanChi() + " Vnđ");
+            tvSotienKhoanChiTK.setText("Số tiền: " + khoanChiDao.getsotienKhoanChi() + " $");
         }
         if (dbtienchi >= 0 & dbtienthu >= 0) {
-            tvSotienhiencoTK.setText("Số tiền: " + (dbtienthu - dbtienchi) + " Vnđ");
+            tvSotienhiencoTK.setText("Số tiền: " + (dbtienthu - dbtienchi) + " $");
         } else {
             tvSotienhiencoTK.setText("Số tiền: ");
         }
@@ -121,7 +121,7 @@ public class Fragment_Thongke extends Fragment {
             if (khoanchi != null) {
                 tvTenKhoanChimaxTK.setText(khoanChiDao.getKhoanChimax().getTenKhoanChi());
                 tvMaKhoanChimaxTK.setText("Mã: " + khoanChiDao.getKhoanChimax().getMaKhoanChi());
-                tvSotienKhoanChimaxTK.setText("Số tiền: " + khoanChiDao.getKhoanChimax().getSotien() + " Vnđ");
+                tvSotienKhoanChimaxTK.setText("Số tiền: " + khoanChiDao.getKhoanChimax().getSotien() + " $");
                 tvGhichuKhoanChimaxTK.setText("Ghi chú: " + khoanChiDao.getKhoanChimax().getGhichu());
                 tvNgayKhoanChimaxTK.setText("Ngày: " + sdf.format(sdf.parse(khoanChiDao.getKhoanChimax().getNgay())));
                 tvTenloaiKhoanChimaxTK.setText("Loại: " + khoanChiDao.getKhoanChimax().getTenLoaiChi());
@@ -137,7 +137,7 @@ public class Fragment_Thongke extends Fragment {
             khoanthu = khoanThuDao.getKhoanThumax();
             if (khoanthu != null) {
                 tvGhichuKhoanThumaxTK.setText("Ghi chú: " + khoanThuDao.getKhoanThumax().getGhichu() + "");
-                tvSotienKhoanThumaxTK.setText("Số tiền: " + khoanThuDao.getKhoanThumax().getSotien() + " Vnđ");
+                tvSotienKhoanThumaxTK.setText("Số tiền: " + khoanThuDao.getKhoanThumax().getSotien() + " $");
                 tvTenloaiKhoanThumaxTK.setText("Loại: " + khoanThuDao.getKhoanThumax().getTenLoaiThu());
                 tvNgayKhoanThumaxTK.setText("Ngày: " + sdf.format(sdf.parse(khoanThuDao.getKhoanThumax().getNgay())));
                 tvTenKhoanThumaxTK.setText(khoanThuDao.getKhoanThumax().getTenKhoanThu());
