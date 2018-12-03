@@ -52,6 +52,7 @@
             app:counterMaxLength="30">
 
             <EditText
+                android:text="admin"
                 android:id="@+id/ed_taikhoan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -68,6 +69,7 @@
             app:counterMaxLength="20">
 
             <EditText
+                android:text="admin"
                 android:id="@+id/ed_matkhau"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -78,6 +80,7 @@
         </android.support.design.widget.TextInputLayout>
 
         <CheckBox
+            android:checked="true"
             android:id="@+id/chk_nhomatkhau"
             style="@style/headlineFont"
             android:layout_width="wrap_content"
