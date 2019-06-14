@@ -9,10 +9,12 @@ import static com.chuyenctn.assignment.common.Contants.CREATE_KHOANCHI_TABLE;
 import static com.chuyenctn.assignment.common.Contants.CREATE_KHOANTHU_TABLE;
 import static com.chuyenctn.assignment.common.Contants.CREATE_LOAICHI_TABLE;
 import static com.chuyenctn.assignment.common.Contants.CREATE_LOAITHU_TABLE;
+import static com.chuyenctn.assignment.common.Contants.CREATE_NGUOIDUNG_TABLE;
 import static com.chuyenctn.assignment.common.Contants.KHOANCHI_TABLE;
 import static com.chuyenctn.assignment.common.Contants.KHOANTHU_TABLE;
 import static com.chuyenctn.assignment.common.Contants.LOAICHI_TABLE;
 import static com.chuyenctn.assignment.common.Contants.LOAITHU_TABLE;
+import static com.chuyenctn.assignment.common.Contants.NGUOIDUNG_TABLE;
 import static com.chuyenctn.assignment.common.Contants.isDEBUG;
 
 public class SqliteHelper extends SQLiteOpenHelper {
@@ -30,6 +32,8 @@ public class SqliteHelper extends SQLiteOpenHelper {
         if (isDEBUG) Log.e("KHOANCHI_TABLE", CREATE_KHOANCHI_TABLE);
         sqLiteDatabase.execSQL(CREATE_KHOANTHU_TABLE);
         if (isDEBUG) Log.e("KHOANTHU_TABLE", CREATE_KHOANTHU_TABLE);
+        sqLiteDatabase.execSQL(CREATE_NGUOIDUNG_TABLE);
+        if (isDEBUG) Log.e(NGUOIDUNG_TABLE, CREATE_NGUOIDUNG_TABLE);
 
 
     }

@@ -22,6 +22,7 @@
                 android:id="@+id/til_themMAKhoan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
                 app:counterEnabled="true"
                 app:counterMaxLength="10">
 
@@ -29,7 +30,7 @@
                     android:id="@+id/ed_themMaKhoan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_regular"
+                    android:fontFamily="@font/roboto"
                     android:hint="Mã khoản thu"
                     android:paddingLeft="8dp" />
             </android.support.design.widget.TextInputLayout>
@@ -38,6 +39,7 @@
                 android:id="@+id/til_themTenKhoan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
                 app:counterEnabled="true"
                 app:counterMaxLength="100">
 
@@ -45,7 +47,7 @@
                     android:id="@+id/ed_themTenKhoan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_regular"
+                    android:fontFamily="@font/roboto"
                     android:hint="Tên khoản thu"
                     android:paddingLeft="8dp" />
             </android.support.design.widget.TextInputLayout>
@@ -54,6 +56,7 @@
                 android:id="@+id/til_themLoaiKhoan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
                 app:counterEnabled="true"
                 app:counterMaxLength="100">
 
@@ -61,7 +64,7 @@
                     android:id="@+id/ed_themLoaiKhoan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_regular"
+                    android:fontFamily="@font/roboto"
                     android:hint="Loại khoản thu"
                     android:paddingLeft="8dp" />
             </android.support.design.widget.TextInputLayout>
@@ -71,6 +74,7 @@
                 android:id="@+id/til_themSoTienKhoan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
                 app:counterEnabled="true"
                 app:counterMaxLength="20">
 
@@ -78,8 +82,8 @@
                     android:id="@+id/ed_themSoTienKhoan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_regular"
-                    android:hint="Số tiền (vnđ)"
+                    android:fontFamily="@font/roboto"
+                    android:hint="Số tiền ($)"
                     android:inputType="number"
                     android:paddingLeft="8dp" />
             </android.support.design.widget.TextInputLayout>
@@ -88,6 +92,7 @@
                 android:id="@+id/til_themNgayKhoan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
                 app:counterEnabled="true"
                 app:counterMaxLength="10">
 
@@ -95,7 +100,7 @@
                     android:id="@+id/ed_themNgayKhoan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_regular"
+                    android:fontFamily="@font/roboto"
                     android:hint="Ngày"
                     android:inputType="date"
                     android:paddingLeft="8dp" />
@@ -105,6 +110,7 @@
                 android:id="@+id/til_themGhiChuKhoan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
                 app:counterEnabled="true"
                 app:counterMaxLength="200">
 
@@ -112,7 +118,7 @@
                     android:id="@+id/ed_themGhiChuKhoan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_regular"
+                    android:fontFamily="@font/roboto"
                     android:hint="Ghi chú"
                     android:paddingLeft="8dp" />
             </android.support.design.widget.TextInputLayout>

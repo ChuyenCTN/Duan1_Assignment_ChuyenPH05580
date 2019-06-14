@@ -21,8 +21,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:src="@drawable/ic_back"
-                android:onClick="back_login"/>
+                android:onClick="back_login"
+                android:src="@drawable/ic_back" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -56,13 +56,15 @@
             android:id="@+id/til_tennguoidung_dk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
             app:counterEnabled="true"
-            app:counterMaxLength="20">
+            app:counterMaxLength="50">
 
             <EditText
                 android:id="@+id/ed_tennguoidung_dk"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
                 android:hint="Tên người dùng"
                 android:paddingLeft="10dp" />
         </android.support.design.widget.TextInputLayout>
@@ -71,6 +73,7 @@
             android:id="@+id/til_taikhoan_dk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
             app:counterEnabled="true"
             app:counterMaxLength="30">
 
@@ -78,6 +81,7 @@
                 android:id="@+id/ed_taikhoan_dk"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
                 android:hint="Tài khoản"
                 android:paddingLeft="10dp" />
         </android.support.design.widget.TextInputLayout>
@@ -86,6 +90,7 @@
             android:id="@+id/til_matkhau_dk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
             app:counterEnabled="true"
             app:counterMaxLength="15">
 
@@ -93,6 +98,7 @@
                 android:id="@+id/ed_matkhau_dk"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
                 android:hint="Mật khẩu"
                 android:inputType="textPassword"
                 android:paddingLeft="10dp" />
@@ -102,15 +108,17 @@
             android:id="@+id/til_xnmatkhau_dk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
             app:counterEnabled="true"
             app:counterMaxLength="15">
 
             <EditText
-                android:inputType="textPassword"
                 android:id="@+id/ed_xnmatkhau_dk"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
                 android:hint="Xác nhận mật khẩu"
+                android:inputType="textPassword"
                 android:paddingLeft="10dp" />
         </android.support.design.widget.TextInputLayout>
 
@@ -124,6 +132,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="50dp"
         android:background="@drawable/border_button"
+        android:fontFamily="@font/roboto"
         android:onClick="dangki"
         android:text="Đăng kí"
         android:textAllCaps="false"

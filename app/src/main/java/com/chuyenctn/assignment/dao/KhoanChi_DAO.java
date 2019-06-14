@@ -138,4 +138,21 @@ public class KhoanChi_DAO {
         return khoanchi;
     }
 
+    public String getTongKhoanchibyMonth(int month) {
+        String sotien = "";
+        sqLiteDatabase = sqliteHelper.getWritableDatabase();
+        String SQL = "SELECT SUM(sotien) from KhoanChi WHERE MONTH(ngay) = 05";
+        Cursor cursor = sqLiteDatabase.rawQuery(SQL, null);
+        if (cursor != null & cursor.getCount() > 0) {
+            cursor.moveToFirst();
+            while (!cursor.isAfterLast()) {
+                sotien = cursor.getString(0) + "";
+                Log.d("tien", sotien);
+                cursor.moveToNext();
+            }
+            cursor.close();
+            sqLiteDatabase.close();
+        }
+        return sotien;
+    }
 }

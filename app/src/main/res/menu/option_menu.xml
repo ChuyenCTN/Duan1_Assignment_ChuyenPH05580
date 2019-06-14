@@ -3,4 +3,7 @@
     <item
         android:id="@+id/optionmenu_taikhoanmoi"
         android:title="Tài khoản mới"></item>
+    <item
+        android:id="@+id/optionmenu_thoat"
+        android:title="Thoát"></item>
 </menu>

@@ -9,19 +9,27 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.chuyenctn.assignment.R;
+import com.chuyenctn.assignment.adapter.Adapter_Month;
 import com.chuyenctn.assignment.dao.KhoanChi_DAO;
 import com.chuyenctn.assignment.dao.KhoanThu_DAO;
 import com.chuyenctn.assignment.model.Khoanchi;
 import com.chuyenctn.assignment.model.Khoanthu;
 import com.chuyenctn.assignment.sqlite.SqliteHelper;
 
+import java.lang.reflect.Array;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 
 public class Fragment_Thongke extends Fragment {
 
@@ -58,11 +66,28 @@ public class Fragment_Thongke extends Fragment {
     private TextView tvMaKhoanChimaxTK;
     private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
+    private Spinner spnMonth;
 
-    @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_thongke, container, false);
+//        spnMonth = (Spinner) view.findViewById(R.id.spn_month);
+        ArrayList<String> data_Month = new ArrayList<>();
+        String[] spinnerItemsArray = getResources().getStringArray(R.array.months);
+        Collections.addAll(data_Month, spinnerItemsArray);
+        Adapter_Month adapterMonth = new Adapter_Month(getContext(), R.layout.item_spinner, data_Month, getResources());
+//        spnMonth.setAdapter(adapterMonth);
+//        spnMonth.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//                String month=parent.getItemAtPosition(position).toString();
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> parent) {
+//
+//            }
+//        });
         cardviewKtTk = (CardView) view.findViewById(R.id.cardview_kt_tk);
         imgKtTk = (ImageView) view.findViewById(R.id.img_kt_tk);
         tvSotienKhoanThuTK = (TextView) view.findViewById(R.id.tv_sotienKhoanThu_TK);

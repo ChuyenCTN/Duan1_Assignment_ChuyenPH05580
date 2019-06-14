@@ -20,6 +20,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
                 android:text="Đăng nhập"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp" />
@@ -48,16 +49,18 @@
             android:id="@+id/til_taikhoan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
             app:counterEnabled="true"
             app:counterMaxLength="30">
 
             <EditText
-                android:text="admin"
                 android:id="@+id/ed_taikhoan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_regular"
+
+                android:fontFamily="@font/roboto"
                 android:hint="Tài khoản"
+                android:text="admin"
                 android:textSize="18sp" />
         </android.support.design.widget.TextInputLayout>
 
@@ -65,26 +68,27 @@
             android:id="@+id/til_matkhau"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
             app:counterEnabled="true"
             app:counterMaxLength="20">
 
             <EditText
-                android:text="admin"
                 android:id="@+id/ed_matkhau"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_regular"
+                android:fontFamily="@font/roboto"
                 android:hint="Mật khẩu"
                 android:inputType="textPassword"
+                android:text="admin"
                 android:textSize="18sp" />
         </android.support.design.widget.TextInputLayout>
 
         <CheckBox
-            android:checked="true"
             android:id="@+id/chk_nhomatkhau"
             style="@style/headlineFont"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
             android:text="Nhớ mật khẩu" />
 
     </LinearLayout>
@@ -96,9 +100,9 @@
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="75dp"
         android:background="@drawable/border_button"
-        android:fontFamily="@font/roboto_regular"
+        android:fontFamily="@font/roboto"
         android:onClick="dangnhap"
         android:text="Đăng nhập"
         android:textAllCaps="false"
@@ -111,12 +115,20 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="50dp"
         android:clickable="true"
-        android:onClick="thoat"
-        android:text="Thoát"
+        android:fontFamily="@font/roboto"
+        android:text="hoặc"
         android:textAllCaps="false"
         android:textSize="13sp" />
 
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/roboto" />
 
 </RelativeLayout>

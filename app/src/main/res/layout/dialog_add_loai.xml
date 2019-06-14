@@ -21,7 +21,7 @@
                 android:id="@+id/til_themMaLoai"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_regular"
+                android:fontFamily="@font/roboto"
                 app:counterEnabled="true"
                 app:counterMaxLength="10">
 
@@ -29,7 +29,7 @@
                     android:id="@+id/ed_themMaLoai"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_regular"
+                    android:fontFamily="@font/roboto"
                     android:hint="Mã loại chi"
                     android:paddingLeft="8dp" />
             </android.support.design.widget.TextInputLayout>
@@ -38,7 +38,7 @@
                 android:id="@+id/til_themTenLoai"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_regular"
+                android:fontFamily="@font/roboto"
                 app:counterEnabled="true"
                 app:counterMaxLength="100">
 
@@ -46,7 +46,7 @@
                     android:id="@+id/ed_themTenLoai"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_regular"
+                    android:fontFamily="@font/roboto"
                     android:hint="Tên loại chi"
                     android:paddingLeft="8dp" />
             </android.support.design.widget.TextInputLayout>
@@ -55,7 +55,7 @@
                 android:id="@+id/til_themGhiChuLoai"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_regular"
+                android:fontFamily="@font/roboto"
                 app:counterEnabled="true"
                 app:counterMaxLength="200">
 
@@ -63,7 +63,7 @@
                     android:id="@+id/ed_themGhiChuLoai"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_regular"
+                    android:fontFamily="@font/roboto"
                     android:hint="Ghi chú"
                     android:paddingLeft="8dp" />
             </android.support.design.widget.TextInputLayout>

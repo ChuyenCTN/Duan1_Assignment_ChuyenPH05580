@@ -29,6 +29,7 @@ import android.widget.Toast;
 import com.chuyenctn.assignment.R;
 import com.chuyenctn.assignment.adapter.Recycle_Adapter_Khoanchi;
 import com.chuyenctn.assignment.dao.KhoanChi_DAO;
+import com.chuyenctn.assignment.dao.KhoanThu_DAO;
 import com.chuyenctn.assignment.dao.LoaiChi_DAO;
 import com.chuyenctn.assignment.model.Khoanchi;
 import com.chuyenctn.assignment.model.Loaichi;
@@ -49,6 +50,7 @@ public class Fragment_Khoanchi extends Fragment {
     private Recycle_Adapter_Khoanchi adapterKhoanchi;
     private KhoanChi_DAO khoanChiDao;
     private List<Khoanchi> dsKhoanchi = new ArrayList<>();
+    private KhoanThu_DAO khoanThuDao;
 
     private LoaiChi_DAO loaiChiDao;
     private List<Loaichi> loaichiList = new ArrayList<>();
@@ -122,10 +124,10 @@ public class Fragment_Khoanchi extends Fragment {
                 tilThemMAKhoan.setHint("Mã khoản chi");
 
                 loaiChiDao = new LoaiChi_DAO(new SqliteHelper(getContext()));
-                final String[] loaichi =  loaiChiDao.gettenloaichi();
-                loaichiList=loaiChiDao.getTenLoaiChi();
-                for (int i=0; i<loaichiList.size();i++){
-                    loaichi[i]=loaichiList.get(i).getTenLoaiChi();
+                final String[] loaichi = loaiChiDao.gettenloaichi();
+                loaichiList = loaiChiDao.getTenLoaiChi();
+                for (int i = 0; i < loaichiList.size(); i++) {
+                    loaichi[i] = loaichiList.get(i).getTenLoaiChi();
                 }
                 edThemLoaiKhoan.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -165,15 +167,49 @@ public class Fragment_Khoanchi extends Fragment {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         khoanChiDao = new KhoanChi_DAO(new SqliteHelper(getContext()));
-                        try {
-                            Khoanchi khoanchi = new Khoanchi(edThemMaKhoan.getText().toString(), edThemTenKhoan.getText().toString(), edThemLoaiKhoan.getText().toString(), edThemNgayKhoan.getText().toString(),edThemGhiChuKhoan.getText().toString(), (edThemSoTienKhoan.getText().toString()));
-                             khoanChiDao.insertKhoanChi(khoanchi)  ;
-                                Toast.makeText(getContext(), "Thêm Thành công", Toast.LENGTH_SHORT).show();
-                                onResume();
+                        khoanThuDao = new KhoanThu_DAO(new SqliteHelper(getContext()));
+                        String tienchi = khoanChiDao.getsotienKhoanChi() + "";
+                        String tienthu = khoanThuDao.getSoTienKhoanThu() + "";
+                        double dbkhoanchi = Double.parseDouble(edThemSoTienKhoan.getText().toString());
+                        double dbtienchi = 0;
+                        double dbtienthu = 0;
+                        if (tienthu.equalsIgnoreCase("null")) {
+                            Toast.makeText(getContext(), "Bạn phải thêm khoản thu trước", Toast.LENGTH_SHORT).show();
+                        } else {
+                            dbtienthu = Double.parseDouble(tienthu);
+                            if (tienchi.equalsIgnoreCase("null")) {
+                                dbtienchi = 0;
+                                if (dbkhoanchi > (dbtienthu - dbtienchi)) {
+                                    Toast.makeText(getContext(), "Khoản chi không được lớn hơn số tiền hiện có \nSố tiền hiện có là:  " + (dbtienthu - dbtienchi), Toast.LENGTH_LONG).show();
+                                } else {
+                                    try {
+                                        Khoanchi khoanchi = new Khoanchi(edThemMaKhoan.getText().toString(), edThemTenKhoan.getText().toString(), edThemLoaiKhoan.getText().toString(), edThemNgayKhoan.getText().toString(), edThemGhiChuKhoan.getText().toString(), (edThemSoTienKhoan.getText().toString()));
+                                        khoanChiDao.insertKhoanChi(khoanchi);
+                                        Toast.makeText(getContext(), "Thêm Thành công", Toast.LENGTH_SHORT).show();
+                                        onResume();
 
-                        } catch (Exception e) {
-                            Log.d("Error: ", e.toString());
+                                    } catch (Exception e) {
+                                        Log.d("Error: ", e.toString());
+                                    }
+                                }
+                            } else {
+                                dbtienchi = Double.parseDouble(tienchi);
+                                if (dbkhoanchi > (dbtienthu - dbtienchi)) {
+                                    Toast.makeText(getContext(), "Khoản chi không được lớn hơn số tiền hiện có \nSố tiền hiện có là:  " + (dbtienthu - dbtienchi), Toast.LENGTH_LONG).show();
+                                } else {
+                                    try {
+                                        Khoanchi khoanchi = new Khoanchi(edThemMaKhoan.getText().toString(), edThemTenKhoan.getText().toString(), edThemLoaiKhoan.getText().toString(), edThemNgayKhoan.getText().toString(), edThemGhiChuKhoan.getText().toString(), (edThemSoTienKhoan.getText().toString()));
+                                        khoanChiDao.insertKhoanChi(khoanchi);
+                                        Toast.makeText(getContext(), "Thêm Thành công", Toast.LENGTH_SHORT).show();
+                                        onResume();
+
+                                    } catch (Exception e) {
+                                        Log.d("Error: ", e.toString());
+                                    }
+                                }
+                            }
                         }
+
                     }
                 });
                 builder.setNegativeButton("Hủy", new DialogInterface.OnClickListener() {

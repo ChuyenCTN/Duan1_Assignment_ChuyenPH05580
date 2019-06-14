@@ -19,8 +19,8 @@
 
         <ImageView
             android:id="@+id/img_logo_kt"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:src="@drawable/item_khoanthu" />
 
@@ -35,7 +35,7 @@
 
             <TextView
                 android:textColor="#000"
-                android:fontFamily="@font/roboto_regular"
+                android:fontFamily="@font/roboto"
                 android:id="@+id/tv_item_tenkhoanthu"
                 android:textSize="18sp"
                 android:layout_width="wrap_content"
@@ -45,7 +45,7 @@
                 android:text="Khoan thu 1" />
 
             <TextView
-                android:fontFamily="@font/roboto_regular"
+                android:fontFamily="@font/roboto"
                 android:id="@+id/tv_item_maloaithu_khoanthu"
                 style="@style/headlineFont"
                 android:layout_width="wrap_content"
@@ -58,7 +58,7 @@
 
 
             <TextView
-                android:fontFamily="@font/roboto_regular"
+                android:fontFamily="@font/roboto"
                 android:id="@+id/tv_item_sotienkhoanthu"
                 style="@style/headlineFont"
                 android:layout_width="wrap_content"

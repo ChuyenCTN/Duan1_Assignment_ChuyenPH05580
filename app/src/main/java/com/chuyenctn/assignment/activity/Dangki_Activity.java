@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.chuyenctn.assignment.R;
 import com.chuyenctn.assignment.dao.Nguoidung_DAO;
 import com.chuyenctn.assignment.model.Nguoidung;
+import com.chuyenctn.assignment.sqlite.SqliteHelper;
 
 public class Dangki_Activity extends AppCompatActivity {
     private Toolbar toolBarDangki;
@@ -26,10 +27,8 @@ public class Dangki_Activity extends AppCompatActivity {
     private EditText edMatkhauDk;
     private TextInputLayout tilXnmatkhauDk;
     private EditText edXnmatkhauDk;
-
     private Nguoidung_DAO nguoidungDao;
     private String strUser, strPass, strHoten, strRepass;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +44,6 @@ public class Dangki_Activity extends AppCompatActivity {
         edMatkhauDk = (EditText) findViewById(R.id.ed_matkhau_dk);
         tilXnmatkhauDk = (TextInputLayout) findViewById(R.id.til_xnmatkhau_dk);
         edXnmatkhauDk = (EditText) findViewById(R.id.ed_xnmatkhau_dk);
-
     }
 
     public void dangki(View view) {
@@ -58,18 +56,21 @@ public class Dangki_Activity extends AppCompatActivity {
         } else if (!strPass.equalsIgnoreCase(strRepass)) {
             Toast.makeText(this, "Mật khẩu không đúng", Toast.LENGTH_SHORT).show();
         } else {
-
-            Nguoidung user = new Nguoidung(strUser, strPass, strHoten);
+            Nguoidung user = new Nguoidung(strHoten, strUser, strPass);
             try {
-
-
-                Toast.makeText(this, "Đăng kí thành công", Toast.LENGTH_SHORT).show();
+                nguoidungDao = new Nguoidung_DAO(new SqliteHelper(getApplicationContext()));
+                if (nguoidungDao.insertNguoiDung(user) > 0) {
+                    Toast.makeText(this, "Đăng kí thành công", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getApplicationContext(), Login_Activity.class);
+                    intent.putExtra("taikhoan", strUser);
+                    intent.putExtra("matkhau", strPass);
+                    startActivity(intent);
+                }
             } catch (Exception e) {
                 Log.e("error: ", e.toString());
             }
         }
     }
-
     public void back_login(View view) {
         startActivity(new Intent(getApplicationContext(), Login_Activity.class));
     }

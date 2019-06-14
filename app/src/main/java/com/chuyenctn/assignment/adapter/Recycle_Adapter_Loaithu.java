@@ -26,6 +26,7 @@ import com.chuyenctn.assignment.R;
 import com.chuyenctn.assignment.dao.LoaiThu_DAO;
 import com.chuyenctn.assignment.model.Loaithu;
 import com.chuyenctn.assignment.sqlite.SqliteHelper;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,6 +54,7 @@ public class Recycle_Adapter_Loaithu extends RecyclerView.Adapter<Recycle_Adapte
         viewHolder.tvItemTenloaithu.setText(loaithuArrayList.get(i).getTenLoaiThu());
         viewHolder.tvItemGhichuloaithu.setText("Ghi chú: " + loaithuArrayList.get(i).getGhichu());
         viewHolder.tvItemMaloaithu.setText("Mã: " + loaithuArrayList.get(i).getMaLoaiThu());
+
         viewHolder.img_more.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -132,6 +134,9 @@ public class Recycle_Adapter_Loaithu extends RecyclerView.Adapter<Recycle_Adapte
         private TextView tvItemTenloaithu, tvItemMaloaithu;
         private TextView tvItemGhichuloaithu;
         private ImageView img_more;
+        private ImageView imgLogoLt;
+
+
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -139,6 +144,8 @@ public class Recycle_Adapter_Loaithu extends RecyclerView.Adapter<Recycle_Adapte
             tvItemTenloaithu = (TextView) itemView.findViewById(R.id.tv_item_tenloaithu);
             tvItemGhichuloaithu = (TextView) itemView.findViewById(R.id.tv_item_ghichuloaithu);
             img_more = itemView.findViewById(R.id.btn_more_loaithu);
+            imgLogoLt = (ImageView) itemView.findViewById(R.id.img_logo_lt);
+
         }
     }
     public void changeDataset(List<Loaithu> items) {

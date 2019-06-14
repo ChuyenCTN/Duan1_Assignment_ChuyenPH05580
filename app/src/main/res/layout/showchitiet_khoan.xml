@@ -20,7 +20,7 @@
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@+id/img_show_avatar_khoan"
-            android:fontFamily="@font/roboto_regular"
+            android:fontFamily="@font/roboto"
             android:text="Name"
             android:textStyle="bold" />\
 
@@ -36,7 +36,7 @@
         android:id="@+id/tv_show_id_Khoan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_regular"
+        android:fontFamily="@font/roboto"
         android:text="Max sachs"
         android:textSize="16sp" />
 
@@ -44,7 +44,7 @@
         android:id="@+id/tv_show_loai_Khoan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_regular"
+        android:fontFamily="@font/roboto"
         android:text="The loai"
         android:textSize="16sp" />
 
@@ -52,7 +52,7 @@
         android:id="@+id/tv_show_sotien_Khoan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_regular"
+        android:fontFamily="@font/roboto"
         android:text="Tac gia"
         android:textSize="16sp" />
 
@@ -60,7 +60,7 @@
         android:id="@+id/tv_show_ngay_Khoan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_regular"
+        android:fontFamily="@font/roboto"
         android:text="NXB"
         android:textSize="16sp" />
 
@@ -68,7 +68,7 @@
         android:id="@+id/tv_show_ghichu_Khoan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_regular"
+        android:fontFamily="@font/roboto"
         android:text="So luong"
         android:textSize="16sp" />
 

@@ -64,4 +64,15 @@ public class Contants {
             "" + KHOANTHU_NGAY + " DATE ," +
             "" + KHOANTHU_GHICHU + " TEXT " +
             ")";
+    //Table nguoidung
+    public final static String NGUOIDUNG_TABLE = "NguoiDung";
+    public final static String NGUOIDUNG_HOTEN = "hoten";
+    public final static String NGUOIDUNG_TAIKHOAN = "taikhoan";
+    public final static String NGUOIDUNG_MATKHAU = "matkhau";
+
+    public final static String CREATE_NGUOIDUNG_TABLE = "CREATE TABLE " + NGUOIDUNG_TABLE + " (" +
+            "" + NGUOIDUNG_TAIKHOAN + " TEXT PRIMARY KEY ," +
+            "" + NGUOIDUNG_HOTEN + " TEXT ," +
+            "" + NGUOIDUNG_MATKHAU + " TEXT " +
+            ")";
 }

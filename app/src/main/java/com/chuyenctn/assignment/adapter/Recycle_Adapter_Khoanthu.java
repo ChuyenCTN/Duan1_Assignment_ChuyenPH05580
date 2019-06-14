@@ -31,6 +31,7 @@ import com.chuyenctn.assignment.dao.LoaiThu_DAO;
 import com.chuyenctn.assignment.model.Khoanthu;
 import com.chuyenctn.assignment.model.Loaithu;
 import com.chuyenctn.assignment.sqlite.SqliteHelper;
+import com.squareup.picasso.Picasso;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -67,6 +68,7 @@ public class Recycle_Adapter_Khoanthu extends RecyclerView.Adapter<Recycle_Adapt
     @Override
     public void onBindViewHolder(@NonNull final Recycle_Adapter_Khoanthu.ViewHolder viewHolder, final int i) {
         viewHolder.tvItemMaloaithuKhoanthu.setText("ID: " + khoanthuArrayList.get(i).getMaKhoanThu());
+        Picasso.with(context).load(R.drawable.ic_item_khoanthu).resize(50,50).into(viewHolder.imgLogoKt);
         viewHolder.tvItemTenkhoanthu.setText(khoanthuArrayList.get(i).getTenKhoanThu());
         viewHolder.tvItemSotienkhoanthu.setText("Số tiền: " + khoanthuArrayList.get(i).getSotien() + " $");
         viewHolder.imgMoreKhoan.setOnClickListener(new View.OnClickListener() {
